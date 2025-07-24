@@ -57,7 +57,7 @@ def apply_custom_css():
             h1 {
                 margin: 0px; /* Remove default margins */
                 flex-shrink: 0;
-                padding-bottom: 0.5rem; /* Add some space below title */
+                # padding-bottom: 0.5rem; /* Add some space below title */
             }
             [data-testid="stTabs"] {
                 flex-shrink: 0;
@@ -455,7 +455,6 @@ def display_tab2_product_comparison(barcode1, barcode2, compare_button):
                         elif product2_carbon > product1_carbon:
                             color2 = 'red'
 
-                    st.subheader("Carbon Emission Comparison")
                     fig_comp = go.Figure(data=[
                         go.Bar(name=product1_name, x=[product1_name], y=[product1_carbon], marker_color=color1),
                         go.Bar(name=product2_name, x=[product2_name], y=[product2_carbon], marker_color=color2)
@@ -464,7 +463,7 @@ def display_tab2_product_comparison(barcode1, barcode2, compare_button):
                         barmode='group',
                         title_text='Carbon Emissions Comparison',
                         yaxis_title='Carbon Emission (gCO2e)',
-                        height=400
+                        height=300
                     )
                     st.plotly_chart(fig_comp, use_container_width=True)
                 else:
