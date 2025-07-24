@@ -1,0 +1,2 @@
+zbar-tools
+```zbar-tools` is the package name that usually provides the `libzbar` shared library on Debian/Ubuntu-based systems (which Streamlit Cloud typically uses).
