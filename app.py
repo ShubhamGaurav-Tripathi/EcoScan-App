@@ -153,21 +153,6 @@ def initialize_session_state():
         st.session_state.selected_demo_product = None
 
 # --- 4. CALLBACK FUNCTIONS ---
-# def update_barcode_from_manual_input():
-#     st.session_state.current_barcode = st.session_state.manual_barcode_input
-#     st.session_state.selected_demo_product = None # Clear demo selection if manually typing
-
-# def update_barcode_from_demo_select():
-#     selected_key = st.session_state.selected_demo_product
-#     if selected_key:
-#         st.session_state.current_barcode = DEMO_BARCODES_MAP[selected_key]
-#     st.session_state.manual_barcode_input = "" # Clear manual input if selecting demo
-
-# def update_barcode_from_upload(detected_barcode):
-#     st.session_state.current_barcode = detected_barcode
-#     st.session_state.manual_barcode_input = "" # Clear manual input
-#     st.session_state.selected_demo_product = None # Clear selected demo
-
 # Callback functions to update the barcode in session state
 def update_barcode_from_manual_input():
     st.session_state.current_barcode = st.session_state.manual_barcode_input
@@ -548,7 +533,7 @@ def main():
         with left_panel_col:
             st.subheader("📚 Enter Product Barcodes")
             barcode1 = st.text_input("Barcode for Product 1", key="barcode1_comp", placeholder="e.g., 3017620429484", value="3017620429484")
-            barcode2 = st.text_input("Barcode for Product 2", key="barcode2_comp", placeholder="e.g., 5449000000996", value="5449000000996")
+            barcode2 = st.text_input("Barcode for Product 2", key="barcode2_comp", placeholder="e.g., 5449000000996", value="8901058001181")
             compare_button = st.button("Compare Carbon Emissions")
 
         with right_panel_col:
